@@ -5,9 +5,9 @@ const config = {
   database: {
     DATABASE: 'dida_taxi',
     USERNAME: 'root',
-    PASSWORD: '123456',
+    PASSWORD: 'XXXXXXX',
     PORT: '3306',
-    HOST: '139.199.165.202'
+    HOST: 'www.xxx.com'
   },
 
   wechat: {
