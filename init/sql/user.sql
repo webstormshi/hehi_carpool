@@ -1,5 +1,5 @@
 -- 基本用户信息表
-CREATE TABLE   IF NOT EXISTS  `user_info` (
+CREATE TABLE IF NOT EXISTS  `user_info` (
   `uid` int(8) NOT NULL AUTO_INCREMENT,         -- 用户id
   `username` varchar(16) DEFAULT NULL,          -- 用户正式姓名
   `nickname` varchar(255) DEFAULT NULL,         -- 用户昵称
@@ -26,18 +26,21 @@ INSERT INTO `user_info` set role=1, memon='今天心情很好，发个下我的�
 
 -- 乘客信息表
 CREATE TABLE IF NOT EXISTS `passenger_info` (
+    `p_id` int(8) NOT NULL AUTO_INCREMENT,
     `uid` int(8) NOT NULL,
     `nickname` varchar(255) DEFAULT NULL,      -- 用户昵称
     `mobile` varchar(32) DEFAULT NULL,         -- 用户联系方式
     `order_num` int(64) DEFAULT NULL,          -- 用户下单量     
     `comment_num` int(64) DEFAULT NULL,        -- 评论量
     `active_range` int(4) DEFAULT NULL,        -- 活跃度
+    PRIMARY KEY (`p_id`),
     FOREIGN KEY (`uid`) references user_info(`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 -- 车主信息表
 CREATE TABLE IF NOT EXISTS `owner_info` (
+    `o_id` int(8) NOT NULL AUTO_INCREMENT,
     `uid` int(8) NOT NULL,
     `verified` int(4) DEFAULT NULL,
     `car_no` varchar(32) DEFAULT NULL,         -- 车牌号
@@ -50,6 +53,7 @@ CREATE TABLE IF NOT EXISTS `owner_info` (
     `order_no` int(64) DEFAULT NULL,           -- 订单量
     `credit_score` int(8) DEFAULT NULL,        -- 信用分
     `user_num` int(64) DEFAULT NULL,           -- 用户量
+    PRIMARY KEY (`o_id`),
     FOREIGN KEY (`uid`) references user_info(`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
