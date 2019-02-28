@@ -28,8 +28,6 @@ INSERT INTO `user_info` set role=1, memon='今天心情很好，发个下我的�
 CREATE TABLE IF NOT EXISTS `passenger_info` (
     `p_id` int(8) NOT NULL AUTO_INCREMENT,
     `uid` int(8) NOT NULL,
-    `nickname` varchar(255) DEFAULT NULL,      -- 用户昵称
-    `mobile` varchar(32) DEFAULT NULL,         -- 用户联系方式
     `order_num` int(64) DEFAULT NULL,          -- 用户下单量     
     `comment_num` int(64) DEFAULT NULL,        -- 评论量
     `active_range` int(4) DEFAULT NULL,        -- 活跃度
