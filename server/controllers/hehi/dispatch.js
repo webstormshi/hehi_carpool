@@ -12,6 +12,7 @@ module.exports = {
                 return;
             case 'POST':
                 let formdata = ctx.request.body;
+                console.log('formdata', formdata);
                 let addResult = await dispatchService.publishSchedule( formdata );
                 ctx.body = await getResult(addResult, '发布车主开车信息失败');
                 return;

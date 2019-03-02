@@ -5,6 +5,7 @@ const router = require('koa-router')();
 const dispatchController = require('../../controllers/hehi/dispatch');
 
 const routes = router
+    .get('/schedule/publish', dispatchController.publishSchedule)     // 发布开车时刻表
     .post('/schedule/publish', dispatchController.publishSchedule)     // 发布开车时刻表
     .post('/schedule/edit', dispatchController.editSchedule)           // 修改开车时刻表
     .post('/schedule/cancel', dispatchController.cancelSchedule)       // 取消时刻表
