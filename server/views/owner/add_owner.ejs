@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <div id="app">
+        <h1><%= title %></h1>
+       <form action="/owner/profile/add" method="POST">
+            <input type="text" name="uid" value="1" hidden/>
+            <input type="text" name="car_no" placeholder="车牌号"><br/>
+            <input type="text" name="car_type" placeholder="车型号"><br/>
+            <input type="text" name="car_color" placeholder="车颜色"><br/>
+            <input type="text" name="car_avatar" placeholder="车图片"><br/>
+            <input type="text" name="am_star_time" placeholder="上班出发时间"><br/>
+            <input type="text" name="pm_star_time" placeholder="下班出发时间"/><br/>
+            <input type="number" name="car_load" placeholder="车载量"/><br/>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>

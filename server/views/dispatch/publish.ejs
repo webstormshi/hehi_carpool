@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <div id="app">
+        <h1><%= title %></h1>
+       <form action="/dispatch/schedule/publish" method="POST">
+            <input type="text" name="uid" value="1" hidden/>
+            <input type="text" name="start" placeholder="发车地点"><br/>
+            <input type="text" name="start_location" placeholder="发车位置"><br/>
+            <input type="text" name="dest" placeholder="目的地"><br/>
+            <input type="text" name="dest_location" placeholder="目的地位置"><br/>
+            <input type="text" name="type" placeholder="出行类型"><br/>
+            <input type="text" name="dispatch_time" placeholder="发车时间"/><br/>
+            <input type="number" name="empty_seat" placeholder="剩余空位"/><br/>
+            <input type="number" name="status" placeholder="等待乘客加入"/><br/>
+            <input type="text" name="introduction" placeholder="发车说明"/><br/>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>
